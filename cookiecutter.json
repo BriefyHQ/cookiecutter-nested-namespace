@@ -1,0 +1,15 @@
+{
+    "full_name": "Amazing Team",
+    "email": "team@mycompany.com",
+    "company": "My Company",
+    "github_username": "My Company",
+    "project_name": "My Package",
+    "project_short_description": "A nice and short description.",
+    "tags": "python package",
+    "repo_name": "my.package",
+    "namespace": "{{ cookiecutter.repo_name.split('.')[0] }}",
+    "package_name": "{{ cookiecutter.repo_name.split('.')[1] }}",
+    "release_date": "today",
+    "year": "2017",
+    "version": "0.1.0"
+}

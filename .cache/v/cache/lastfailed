@@ -1,0 +1,5 @@
+{
+  "tests/test_cookiecutter_generation.py::test_enabled_features[use_celery]": true,
+  "tests/test_cookiecutter_generation.py::test_enabled_features[use_mailhog]": true,
+  "tests/test_cookiecutter_generation.py::test_enabled_features[windows]": true
+}
