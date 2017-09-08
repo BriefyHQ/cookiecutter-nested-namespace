@@ -3,7 +3,6 @@ from textwrap import dedent
 
 import subprocess
 import sys
-import os
 
 
 try:
@@ -24,7 +23,7 @@ if VIRTUALENV_AVAILABLE:
         proc.wait()
     except subprocess.CalledProcessError:
         print('It was not possible to create the virtualenv. Maybe inside tox?')
-    except os.FileNotFoundError:
+    except FileNotFoundError:
         print(subprocess.check_output(['ls']))
 
 
