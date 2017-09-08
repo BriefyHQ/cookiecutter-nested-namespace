@@ -1,8 +1,10 @@
 """Create virtualenv and print a thank you note."""
+from textwrap import dedent
+
 import subprocess
 import sys
+import os
 
-from textwrap import dedent
 
 try:
     import venv
@@ -22,6 +24,8 @@ if VIRTUALENV_AVAILABLE:
         proc.wait()
     except subprocess.CalledProcessError:
         print('It was not possible to create the virtualenv. Maybe inside tox?')
+    except os.FileNotFoundError:
+        print(subprocess.check_output(['ls']))
 
 
 separator = '=' * 79
