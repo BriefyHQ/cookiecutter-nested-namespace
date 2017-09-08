@@ -55,8 +55,8 @@ def check_paths(paths):
 def test_default_configuration(cookies, context):
     """Generated project should replace all variables."""
     result = cookies.bake(extra_context=context)
-    assert result.exit_code == 0
     assert result.exception is None
+    assert result.exit_code == 0
     assert result.project.basename == context['repo_name']
     assert result.project.isdir()
 
