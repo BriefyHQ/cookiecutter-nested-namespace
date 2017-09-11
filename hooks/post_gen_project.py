@@ -27,13 +27,12 @@ if VIRTUALENV_AVAILABLE:
         print(subprocess.check_output(['ls']))
 
 
-separator = '=' * 79
 msg = dedent("""
-    %(separator)s
+    ===============================================================================
     Package {{ cookiecutter.repo_name }} was generated.
     Now, code it, create a git repository, push to your Github account.
     Sorry for the convenience.
-    %(separator)s
-""").format(separator=separator)
+    ===============================================================================
+""")
 
 print(msg)
