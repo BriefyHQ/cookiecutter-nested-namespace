@@ -2,7 +2,7 @@
 Nested Package Cookiecutter
 ===========================
 
-Cookiecutter template for a Briefy worker package. See https://github.com/audreyr/cookiecutter.
+Cookiecutter template for a Python package with nested namespace. See https://github.com/audreyr/cookiecutter.
 
 * Virtualenv automatically created and setup in development mode
 * `Travis-CI`_: Ready for Travis Continuous Integration testing
