@@ -6,3 +6,4 @@ History
 ------------------
 
 * Initial release (ericof).
+* Small fixes and improvements (rudaporto).

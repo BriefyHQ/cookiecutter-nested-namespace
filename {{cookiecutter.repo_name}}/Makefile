@@ -72,13 +72,14 @@ clean-test: ## remove test and coverage artifacts
 	rm -fr htmlcov/
 
 lint: ## check style with flake8
-	flake8 src/{{ cookiecutter.namespace }}/{{ cookiecutter.package_name }}  tests setup.py
+	flake8 src/{{ cookiecutter.namespace }}/{{ cookiecutter.package_name }} setup.py
+	flake8 --ignore=D102,D103,D205,D101,D400,D210,D401,D100 tests
 
 test: ## run tests quickly with the default Python
-	py.test
+	py.test --cov-report term-missing --cov={{ cookiecutter.repo_name }}  tests
 
 coverage: ## check code coverage quickly with the default Python
-	coverage run --source {{ cookiecutter.repo_name }} py.test
+	coverage run --source {{ cookiecutter.repo_name }} env/bin/pytest tests
 	
 		coverage report -m
 		coverage html

@@ -6,9 +6,10 @@ branches:
   - master
   - develop
 env:
-    - TOX_ENV=py35
-    - TOX_ENV=py36
-    - TOX_ENV=lint
+  - TOX_ENV=py35
+  - TOX_ENV=py36
+  - TOX_ENV=lint
+  - TOX_ENV=coverage
 
 install:
 - pip install -r requirements/dev.txt
