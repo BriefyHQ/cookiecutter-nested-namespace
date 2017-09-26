@@ -11,6 +11,7 @@ with open(os.path.join(here, 'HISTORY.rst')) as f:
     CHANGES = f.read()
 
 requires = [
+    'prettyconf',
     'setuptools',
 ]
 
