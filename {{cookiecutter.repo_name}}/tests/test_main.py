@@ -1,4 +1,5 @@
 """Test Example."""
+from {{ cookiecutter.namespace }}.{{ cookiecutter.package_name }} import logger
 import pytest
 
 
@@ -22,4 +23,5 @@ test_data = [
 @pytest.mark.parametrize('key,value', test_data)
 def test_key_value(context, key, value):
     """Test context values."""
+    logger.info('Test')
     assert context[key] == value
